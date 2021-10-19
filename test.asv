@@ -78,10 +78,10 @@ try
         WaitSecs(0. 1);
 
         % Rest
-        Screen('FillRect', window, [96 96 96]); % Background draw
+        Screen('FillRect', window, [0 0 0]); % Background draw
         Screen('DrawLines', window, fix, [2 2 2], [255, 255, 255]);
-        Screen('FillOval', window, [0 0 0], somato_left);
-        Screen('FillOval', window, [0 0 0], somato_right);
+        Screen('FillOval', window, [255 255 255], [centerX-obj_size/2-obj_exc centerY-obj_size/2 centerX+obj_size/2-obj_exc centerY+obj_size/2]);
+        Screen('FillOval', window, [255 255 255], [centerX-obj_size/2+obj_exc centerY-obj_size/2 centerX+obj_size/2+obj_exc centerY+obj_size/2]);
 
         Screen('Flip', window); % Display
         WaitSecs(2.5+rand);
